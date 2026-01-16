@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>FWI Prediction</h1>
+
+    <form action={{ url_for('predict_datapoint') }} method="post">
+    <label for="Temperature">Temperature:</label>
+    <input type="text" placeholder="Temperature" name="Temperature" required /><br /><br />
+
+    <label for="RH">RH:</label>
+    <input type="text" placeholder="RH" name="RH" required /><br /><br />
+
+    <label for="Ws">Ws:</label>
+    <input type="text" placeholder="Ws" name="Ws" required /><br /><br />
+
+    <label for="Rain">Rain:</label>
+    <input type="text" placeholder="Rain" name="Rain" required /><br /><br />
+    <label for="FFMC">FFMC:</label>
+    <input type="text" placeholder="FFMC" name="FFMC" required /><br /><br />
+    <label for="DMC">DMC:</label>
+    <input type="text" placeholder="DMC" name="DMC" required /><br /><br />
+    <label for="ISI">ISI:</label>
+    <input type="text" placeholder="ISI" name="ISI" required /><br /><br />
+    <label for="Classes">Classes:</label>
+    <input type="text" placeholder="Classes" name="Classes" required /><br /><br />
+    <label for="Region">Region:</label>
+    <input type="text" placeholder="Region" name="Region" required /><br /><br />
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict FWI</button>
+    </form>
+    <h2> THE FIRE WEATHER INDEX PREDICTION is {{ results if results is defined else '' }} </h2>
+ 
+  </body>
+</html>
